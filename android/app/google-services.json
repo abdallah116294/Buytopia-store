@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "388355971444",
+    "project_id": "buytopia-90087",
+    "storage_bucket": "buytopia-90087.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388355971444:android:0090f5dcc509db35cff421",
+        "android_client_info": {
+          "package_name": "com.example.ecommerce_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUd1DlfBQRZN6-kIB8PaihNECMZGxdX0M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
