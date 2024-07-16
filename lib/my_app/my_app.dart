@@ -1,6 +1,7 @@
 import 'package:ecommerce_app/core/app/connectivity_controller.dart';
 import 'package:ecommerce_app/core/app/env_variables.dart';
 import 'package:ecommerce_app/core/common/screens/no_network_screen.dart';
+import 'package:ecommerce_app/core/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -19,6 +20,8 @@ class Buytopia_App extends StatelessWidget {
       splitScreenMode: true,
             builder: (_,child) {
               return MaterialApp(
+                 onGenerateRoute: AppRoutes.onGenerateRoute,
+                 initialRoute: AppRoutes.testone,
                   debugShowCheckedModeBanner: EnvVariable.instance.debugMode,
                   // title: "Buytopia",
                   theme: ThemeData(
