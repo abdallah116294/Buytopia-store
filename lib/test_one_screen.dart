@@ -15,11 +15,14 @@ class TestOneScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          ElevatedButton(
-              onPressed: () {
-                context.pushName(AppRoutes.testtwoe);
-              },
-              child: const Text('Test')),
+          Center(
+            child: ElevatedButton(
+                onPressed: () {
+                  context.pushName(AppRoutes.testtwoe);
+                },
+                child: const Text('Test')),
+          ),
+           Image.asset(context.assets.testImage??'')
         ],
       ),
     );
