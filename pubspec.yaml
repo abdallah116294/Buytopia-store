@@ -35,6 +35,7 @@ dependencies:
     sdk: flutter
   flutter_dotenv: ^5.1.0
   flutter_launcher_icons: ^0.13.1
+  flutter_localization: ^0.2.0
   flutter_native_splash: ^2.4.0
   flutter_screenutil: ^5.9.3
   very_good_analysis: 5.1.0
@@ -68,6 +69,8 @@ flutter:
     - assets/images/core/
     - assets/images/
     - assets/icons/
+    - lang/ar.json
+    - lang/en.json
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see
@@ -78,7 +81,7 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    # Arabic fonts 
+    # Arabic fonts
     - family: Cairo
       fonts:
         - asset: assets/fonts/arabic/cairo/Cairo-Bold.ttf
@@ -96,6 +99,5 @@ flutter:
           weight: 500
         - asset: assets/fonts/english/poppins/Poppins-Regular.ttf
           weight: 400
-  
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

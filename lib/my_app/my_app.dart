@@ -1,6 +1,7 @@
 import 'package:ecommerce_app/core/app/connectivity_controller.dart';
 import 'package:ecommerce_app/core/app/env_variables.dart';
 import 'package:ecommerce_app/core/common/screens/no_network_screen.dart';
+import 'package:ecommerce_app/core/language/app_localization_setup.dart';
 import 'package:ecommerce_app/core/routes/app_routes.dart';
 import 'package:ecommerce_app/core/style/theme/app_theme.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +22,11 @@ class Buytopia_App extends StatelessWidget {
       splitScreenMode: true,
             builder: (_,child) {
               return MaterialApp(
+                //4 things add to localization 
+                locale:Locale('ar') ,
+              supportedLocales:AppLocalizationsSetup.supportedLocales,
+                 localizationsDelegates: AppLocalizationsSetup.localizationsDelegates,
+                 localeResolutionCallback:AppLocalizationsSetup.localeResolutionCallback ,
                  onGenerateRoute: AppRoutes.onGenerateRoute,
                  initialRoute: AppRoutes.testone,
                   debugShowCheckedModeBanner: EnvVariable.instance.debugMode,
