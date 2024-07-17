@@ -16,29 +16,36 @@ class Buytopia_App extends StatelessWidget {
       valueListenable: ConnectivityController.instance.isConnected,
       builder: (_, value, child) {
         if (value) {
-          return ScreenUtilInit( 
-              designSize: const Size(390, 844),
-      minTextAdapt: true,
-      splitScreenMode: true,
-            builder: (_,child) {
+          return ScreenUtilInit(
+            designSize: const Size(390, 844),
+            minTextAdapt: true,
+            splitScreenMode: true,
+            builder: (_, child) {
               return MaterialApp(
-                //4 things add to localization 
-                locale:Locale('ar') ,
-              supportedLocales:AppLocalizationsSetup.supportedLocales,
-                 localizationsDelegates: AppLocalizationsSetup.localizationsDelegates,
-                 localeResolutionCallback:AppLocalizationsSetup.localeResolutionCallback ,
-                 onGenerateRoute: AppRoutes.onGenerateRoute,
-                 initialRoute: AppRoutes.testone,
+                  //4 things add to localization
+                  locale: Locale('ar'),
+                  supportedLocales: AppLocalizationsSetup.supportedLocales,
+                  localizationsDelegates:
+                      AppLocalizationsSetup.localizationsDelegates,
+                  localeResolutionCallback:
+                      AppLocalizationsSetup.localeResolutionCallback,
+                  onGenerateRoute: AppRoutes.onGenerateRoute,
+                  initialRoute: AppRoutes.testone,
                   debugShowCheckedModeBanner: EnvVariable.instance.debugMode,
                   // title: "Buytopia",
                   theme: darkTheme(),
                   builder: (context, widget) {
-                    return Scaffold(
-                      body: Builder(
-                        builder: (context) {
-                          ConnectivityController.instance.init();
-                          return widget!;
-                        },
+                    return GestureDetector(
+                      onTap: () {
+                        FocusManager.instance.primaryFocus?.unfocus();
+                      },
+                      child: Scaffold(
+                        body: Builder(
+                          builder: (context) {
+                            ConnectivityController.instance.init();
+                            return widget!;
+                          },
+                        ),
                       ),
                     );
                   },
